@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian National Bank (INB)</title>
+    <link rel="stylesheet" href="/stylesheets/Customer-Data.css">
+</head>
+
+<body>
+    <nav id="Navigation-Bar" class="Background_1">
+        <div id="Logo">
+          <a href="/"><img src="/images/Logo.jpg" alt="Logo"></a>
+          <p id="Para_1"><a href="/">I N B</a></p>
+        </div>
+
+        <div id="Heading">
+          <h1 id="Heading_1">Indian National Bank (INB)</h1>
+          <p id="Para_2">India's No.1 and one of the World's largest growing Private Banks</p>
+        </div>
+    </nav>
+
+<section id="Section_6">
+<section id="Section_5">
+    <section id="Section_1">
+        <h2 id="Heading_2"><u><%= Record.Name %></u></h2>
+    </section>
+
+    <section id="Section_2">
+        <p>Phone Number - <%= Record.Phone_Number %></p>
+        <p>Email ID - <%= Record.Email %></p>
+        <p>Current Balance - <%= Record.Current_Balance %></p>
+    </section>
+
+    <section id="Section_3">
+        <button id="Button_1" onclick="myFunction_1()">Transfer Money</button>
+    </section>
+
+    <section id="Section_4">
+        <div id="Div_1">
+            <form id="Form_1" action="/Customer" method="POST">
+                <input id="Input_1" name="Amount" type="tel" placeholder="Enter amount" required autocomplete="off">
+                <button id="Button_2" onclick="myFunction_2()" type="submit">Pay</button>
+            </form>
+        </div>
+    </section>
+</section>
+
+    <div id="Div_2">
+        <p><a href="/Customers">View all Customers</a></p>
+    </div>
+</section>
+
+    <footer>
+        <div id="Copyright">
+          Copyright &copy; www.IndianNationalBank.com. All rights reserved!
+        </div>
+    </footer>
+
+    <script>
+        function myFunction_1(){
+            var x = document.getElementById("Section_4");
+
+            if(x.style.display == "none")
+            {
+                x.style.display = "block";
+            }
+            else
+            {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        function myFunction_2(){
+            var Form = document.getElementById("Form_1");
+            var Characters = /^[A-Za-z]+$/;
+            var Special_Characters = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+
+            if(Form.checkValidity() == false)
+            {
+                alert("Please fill out the Amount field.");
+            }
+            else if(document.getElementById("Input_1").value.match(Characters))
+            {
+                alert("Please enter a number in the Amount field.");
+                document.getElementById("Input_1").value = 0;
+            }
+            else if(document.getElementById("Input_1").value.match(Special_Characters))
+            {
+                alert("Please enter a number in the Amount field.");
+                document.getElementById("Input_1").value = 0;
+            }
+            else
+            {
+            var x = document.getElementById("Input_1").value;
+            var y = "<%= Record.Name %>";
+            var z = confirm("Are you sure you want to pay Rs. "+x+" to "+y+"?");
+            if(z == true)
+            {
+                alert("Rs. "+x+" paid successfully to "+y+'.');
+            }
+            else
+            {
+                document.getElementById("Input_1").value = 0;
+            }
+            }
+        }
+    </script>
+</body>
+</html>

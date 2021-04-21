@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian National Bank (INB)</title>
+    <link rel="stylesheet" href="/stylesheets/Customers.css">
+</head>
+
+<body>
+    <nav id="Navigation-Bar" class="Background_1">
+        <div id="Logo">
+          <a href="/"><img src="/images/Logo.jpg" alt="Logo"></a>
+          <p id="Para_1"><a href="/">I N B</a></p>
+        </div>
+  
+        <div id="Heading">
+          <h1 id="Heading_1">Indian National Bank (INB)</h1>
+          <p id="Para_2">India's No.1 and one of the World's largest growing Private Banks</p>
+        </div>
+    </nav>
+
+    <section id="Section_1">
+        <div id="Div_1">
+            <h1 id="Heading_2"><u>Our Customers</u></h1>
+        </div>
+
+        <div id="Div_2">
+            <ol id="OL-1">
+                <% Records.forEach(function(row){ %>
+                    <li class="List-1"><a id="a_1" href="/Customer/<%= row.Email %>"><%= row.Name %></a></li>
+                <% }); %>
+            </ol>
+        </div>
+    </section>
+
+    <footer>
+        <div id="Copyright">
+          Copyright &copy; www.IndianNationalBank.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+</html>

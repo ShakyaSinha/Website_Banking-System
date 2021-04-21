@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  #Navigation-Bar{
+    display: flex;
+    position: relative;
+  }
+  
+  .Background_1{
+    background: rgba(0, 0, 0, 0.8) url("/images/Background-1.jpg");
+    background-blend-mode: darken;
+  }
+  
+  nav #Logo{
+    width: 30%;
+  }
+  
+  #Navigation-Bar #Logo img{
+    width: 45px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 45px;
+    border: 3px solid white;
+  }
+  
+  #Navigation-Bar div #Para_1 a{
+    font-size: 12px;
+    margin: 0px 18px 2px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav #Heading{
+    width: 40%;
+    text-align: center;
+  }
+  
+  #Heading h1{
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  #Heading #Para_2{
+    margin-top: 4px;
+    color: white;
+    font-size: 12px;
+  }
+
+#Section_1{
+  height: 489px;
+  background-color: rgb(209, 209, 209);
+}
+
+#Div_1{
+  width: 40%;
+  margin: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+#Heading_2{
+  font-size: 29px;
+  color: rgb(24, 23, 23);
+  font-family:'Times New Roman', Times, serif;
+}
+
+#Div_2{
+  width: 70%;
+  margin: auto;
+  margin-top: 47px;
+  height: 400px;
+}
+
+#Div_2 #OL-1{
+  margin-left: 80px;
+}
+
+.List-1{
+  color: rgb(25, 25, 230);
+  margin: 13px;
+  font-size: 17px;
+}
+
+.List-1 #a_1{
+  color: rgb(25, 25, 230);
+  text-decoration: none;
+}
+
+.List-1 #a_1:hover{
+  color: rgb(60, 60, 190);
+  text-decoration: underline;
+}
+
+  #Copyright{
+    background: black;
+    color: white;
+    text-align: center;
+    opacity: 0.9;
+  }
