@@ -1,1 +1,1 @@
-web: node app.js
+web: "DEBUG = 1. Banking System: *"; npm start
