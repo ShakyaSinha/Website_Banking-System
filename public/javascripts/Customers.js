@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/Banking_System", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://Shakya:Shakya@cluster-1.jlvev.mongodb.net/Banking_System?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 
 var Connection = mongoose.connection;
 
